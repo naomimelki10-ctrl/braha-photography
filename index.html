@@ -1,0 +1,220 @@
+
+<!DOCTYPE html> <!-- אומר לדפדפן שזה מסמך HTML5 -->
+<html lang="he" dir="rtl"> <!-- האתר בעברית ובכיוון ימין לשמאל -->
+
+
+<head>
+    <meta charset="UTF-8"> <!-- מאפשר עברית ותווים מיוחדים -->
+    <title>אתר צילום - ברכה מלכי</title> <!-- הכותרת שמופיעה בלשונית הדפדפן -->
+
+
+    <link rel="stylesheet" href="style.css"> <!-- חיבור לקובץ העיצוב של דף הבית -->
+
+
+    <!-- חיבור לפונטים חיצוניים מגוגל -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+
+<!-- סרגל ניווט עליון קבוע -->
+<header class="top-nav">
+    <nav class="nav-links">
+        <a href="#about">קצת על עצמי</a> <!-- קישור לאזור אודות -->
+        <a href="#categories">קטגוריות</a> <!-- קישור לאזור הקטגוריות -->
+        <a href="#contact">יצירת קשר</a> <!-- קישור לאזור יצירת קשר -->
+    </nav>
+</header>
+
+
+<!-- לוגו האתר -->
+<img src="Logo.png" class="logo" alt="ברכה מלכי צילום">
+
+
+<!-- גלריית תמונות נעה בדף הבית -->
+<div class="hero-marquee">
+    <div class="hero-track" id="heroSlider"></div>
+    <!-- התמונות עצמן לא כתובות כאן ידנית.
+         הן נטענות דינמית דרך script.js מהשרת -->
+</div>
+
+
+<!-- אזור קצת על עצמי -->
+<section class="intro-text" id="about">
+    <h2 class="intro-title">קצת על עצמי</h2>
+
+
+    <p>
+        נעים מאוד, אני ברכה מלכי צלמת מוסמכת מבית הספר לאמנות ולצילום אומן בירושלים.
+        אני מלווה משפחות בתיעוד הרגעים היפים והמרגשים של החיים בהריון, עם תינוק חדש
+        ובצילומי משפחה מלאי חום ואהבה.
+    </p>
+
+
+    <p>
+        בסטודיו הביתי שלי הממוקם בלב ירושלים, תיהנו מחוויה רגועה, נעימה ומקצועית,
+        באווירה רכה וחמה. כל סשן נבנה בהתאמה אישית - מבחירת הסגנון והסטים בעיצוב נקי וטבעי,
+        ועד לליווי מלא בבחירת בגדים וסטיילינג.
+    </p>
+
+
+    <p>
+        המטרה שלי היא ליצור עבורכם תמונות טבעיות, מרגשות ועל־זמניות - מזכרת יקרה שתישאר
+        אתכם לשנים רבות. יותר מצילום - חוויה אישית ומרגשת.
+    </p>
+
+
+    <p class="intro-contact">
+        לתיאום סשן צילום ולקבלת פרטים נוספים - מוזמנים ליצור קשר.
+    </p>
+</section>
+
+
+<!-- אזור הקטגוריות -->
+<div class="categories-container" id="categories">
+
+
+    <!-- כל div כזה הוא קטגוריה.
+         ה־id משמש את script.js כדי לדעת לאיזה עמוד להעביר בלחיצה -->
+
+
+    <div class="category" id="Maternity">
+        <img src="Maternity-1.jpg" alt="צילומי הריון">
+        <span class="category-title">
+            <span class="hebrew">הריון</span><br>
+            <span class="english">Maternity</span>
+        </span>
+    </div>
+
+
+    <div class="category" id="newborn">
+        <img src="Newborn-1.jpg" alt="צילומי ניו בורן">
+        <span class="category-title">
+            <span class="hebrew">ניו בורן</span><br>
+            <span class="english">Newborn</span>
+        </span>
+    </div>
+
+
+    <div class="category" id="Smashcake">
+        <img src="Smash Cake-1.jpg" alt="צילומי גיל שנה">
+        <span class="category-title">
+            <span class="hebrew">גיל שנה</span><br>
+            <span class="english">Smash cake</span>
+        </span>
+    </div>
+
+
+    <div class="category" id="chalake">
+        <img src="Halake-1.jpg" alt="צילומי חלאקה">
+        <span class="category-title">
+            <span class="hebrew">חלאקה</span><br>
+            <span class="english">Chalake</span>
+        </span>
+    </div>
+
+
+    <div class="category" id="batmitzvah">
+        <img src="Bat Mitsva-1.jpg" alt="צילומי בת מצווה">
+        <span class="category-title">
+            <span class="hebrew">בר/ת מצווה</span><br>
+            <span class="english">Bat/r Mitsva</span>
+        </span>
+    </div>
+
+
+    <div class="category" id="family">
+        <img src="Family-1.jpg" alt="צילומי משפחה">
+        <span class="category-title">
+            <span class="hebrew">משפחה</span><br>
+            <span class="english">Family</span>
+        </span>
+    </div>
+
+
+    <div class="category" id="prints">
+        <img src="igoul.png" alt="הדפסות">
+        <span class="category-title">
+            <span class="hebrew">הדפסות</span><br>
+            <span class="english">Prints</span>
+        </span>
+    </div>
+
+
+    <div class="category" id="portrait">
+        <img src="Portrait-1.jpg" alt="צילומי פורטרט">
+        <span class="category-title">
+            <span class="hebrew">פורטרט</span><br>
+            <span class="english">Portrait</span>
+        </span>
+    </div>
+
+
+</div>
+
+
+<!-- אזור יצירת קשר -->
+<div class="contact-container" id="contact">
+
+
+    <h3 class="contact-title">ליצירת קשר</h3>
+
+
+    <!-- אייקונים חברתיים. כל אייקון הוא קישור -->
+    <div class="social-icons">
+
+
+        <a href="https://www.instagram.com/braha.melki.photography/" target="_blank">
+            <img src="לוגו אינסטגרם.png" alt="Instagram">
+        </a>
+
+
+        <a href="https://www.facebook.com/BrahaMelkiPhotography/" target="_blank">
+            <img src="לוגו פייסבווק.png" alt="Facebook">
+        </a>
+
+
+        <a href="https://wa.me/972585098327" target="_blank">
+            <img src="לוגו ווצאפ.png" alt="WhatsApp">
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- כפתור וואטסאפ צף בצד המסך -->
+<a href="https://wa.me/972585098327" class="whatsapp-float" target="_blank">
+    <img src="לוגו ווצאפ.png" alt="WhatsApp">
+</a>
+
+
+<!-- שורת קישורים/שירותים בתחתית הדף -->
+<div class="bottom-links">
+    <span>צילומי הריון</span>
+    <span>|</span>
+    <span>צילומי ניו בורן</span>
+    <span>|</span>
+    <span>צילומי משפחה</span>
+    <span>|</span>
+    <span>צילומי סמאש קייק</span>
+    <span>|</span>
+    <span>צילומי בת מצווה</span>
+    <span>|</span>
+    <span>צילומי חלאקה</span>
+    <span>|</span>
+    <span>צילומי פורטרט</span>
+</div>
+
+
+<!-- חיבור לקובץ JavaScript של דף הבית -->
+<script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* גורם לגלילה חלקה כשלוחצים בסרגל */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* עיצוב כללי של גוף הדף */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #fcf8f9 50%,
+        #ffffff 100%
+    );
+    text-align: center;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+
+/* סרגל עליון קבוע */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    z-index: 9999;
+    padding: 12px 0;
+}
+
+
+/* מסדר את הקישורים בסרגל בשורה */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/* עיצוב הקישורים בסרגל */
+.nav-links a {
+    text-decoration: none;
+    color: #888;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+
+/* שינוי צבע במעבר עכבר */
+.nav-links a:hover {
+    color: #b76e79;
+}
+
+
+/* קו קטן מתחת לקישור */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #b76e79;
+    bottom: -5px;
+    right: 0;
+    transition: 0.3s;
+}
+
+
+/* הקו נפתח במעבר עכבר */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* לוגו ראשי */
+.logo {
+    width: 700px;
+    height: auto;
+    margin: 0 auto 25px;
+    display: block;
+}
+
+
+/* עיצוב כללי לפסקאות */
+p {
+    font-size: 22px;
+    color: #888888;
+}
+
+
+/* אזור קצת על עצמי */
+.intro-text {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    direction: rtl;
+}
+
+
+/* פסקאות באזור האודות */
+.intro-text p {
+    font-family: "Georgia", serif;
+    font-size: 22px;
+    line-height: 2.1;
+    color: #777;
+    margin-bottom: 28px;
+}
+
+
+/* כותרת קצת על עצמי */
+.intro-title {
+    font-family: "Georgia", serif;
+    font-size: 32px;
+    color: #B76E79;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* אזור הקטגוריות */
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 25px;
+    max-width: 520px;
+    margin: 25px auto 35px;
+    justify-items: center;
+}
+
+
+/* קטגוריה בודדת */
+.category {
+    position: relative;
+    text-align: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+/* הגדלה קלה במעבר עכבר */
+.category:hover {
+    transform: scale(1.08);
+}
+
+
+/* תמונת קטגוריה עגולה */
+.category img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* כיתוב מתחת לתמונה */
+.category-title {
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* טקסט עברי של קטגוריה */
+.hebrew {
+    display: block;
+    color: #888888;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* טקסט אנגלי של קטגוריה */
+.english {
+    display: block;
+    color: #b76e79;
+    font-size: 20px;
+    font-family: 'Great Vibes', cursive;
+    margin-top: 2px;
+}
+
+
+/* אזור יצירת קשר */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    direction: rtl;
+    padding: 20px;
+    margin: 20px auto 60px;
+    text-align: center;
+}
+
+
+/* כותרת יצירת קשר */
+.contact-title {
+    color: #B76E79;
+    font-size: 42px;
+    font-family: "Georgia", serif;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+
+/* אייקונים של רשתות חברתיות */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+
+/* גודל האייקונים */
+.social-icons img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    transition: 0.3s ease;
+}
+
+
+/* הגדלה במעבר עכבר */
+.social-icons img:hover {
+    transform: scale(1.15);
+}
+
+
+/* כפתור וואטסאפ צף */
+.whatsapp-float {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    width: 75px;
+    height: 75px;
+    z-index: 9999;
+}
+
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
+}
+
+
+/* שלא ייחתך כשגוללים דרך הסרגל */
+#about, #categories, #contact {
+    scroll-margin-top: 90px;
+}
+
+
+/* גלריית תמונות זזה בדף הבית */
+.hero-marquee {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px auto 60px;
+}
+
+
+/* המסלול של התמונות */
+.hero-track {
+    display: flex;
+    width: max-content;
+    animation: scrollGallery 150s linear infinite;
+}
+
+
+/* עצירת האנימציה במעבר עכבר */
+.hero-track:hover {
+    animation-play-state: paused;
+}
+
+
+/* תמונה בגלריה הנעה */
+.hero-track .slide {
+    width: 320px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+
+.hero-track .slide:hover {
+    transform: scale(1.03);
+}
+
+
+/* האנימציה שמזיזה את התמונות */
+@keyframes scrollGallery {
+    from {
+        transform: translateX(0);
+    }
+
+
+    to {
+        transform: translateX(-33.333%);
+    }
+}
+
+
+/* שורת שירותים בתחתית */
+.bottom-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #8a8a8a;
+    font-size: 15px;
+    direction: rtl;
+}
+
+
+.bottom-links span {
+    transition: 0.3s;
+}
+
+
+.bottom-links span:hover {
+    color: #b76e79;
+}
+
+
+/* התאמה למסכים קטנים */
+@media (max-width: 900px) {
+    .home-gallery {
+        column-count: 2;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-track .slide {
+        width: 220px;
+        height: 320px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .logo {
+        width: 90%;
+    }
+
+
+    .categories-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .nav-links {
+        gap: 16px;
+    }
+
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+
+    .home-gallery {
+        column-count: 1;
+    }
+}

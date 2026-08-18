@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>חלאקה - ברכה מלכי צילום</title>
+    <link rel="stylesheet" href="categories.css">
+</head>
+
+<body data-category="upsherin">
+
+<header class="page-header">
+    <img src="Logo.png" alt="ברכה מלכי צילום" class="logo">
+</header>
+
+<a href="index.html" class="back-home">חזרה לדף הבית</a>
+
+<h1 id="title" class="page-title">טוען כותרת...</h1>
+
+<div class="info-buttons">
+
+    <button class="info-btn" onclick="openModal('session')">
+        <svg viewBox="0 0 24 24">
+            <path d="M9 3l-2 2H3v14h18V5h-4l-2-2H9zm3 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+        </svg>
+        <span>איך מתבצע</span>
+    </button>
+
+    <button class="info-btn" onclick="openModal('importantInfo')">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+        </svg>
+        <span>חשוב לדעת</span>
+    </button>
+
+    <button class="info-btn" onclick="openModal('whatToBring')">
+        <svg viewBox="0 0 24 24">
+            <path d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v3H2V8a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2zM2 12h20v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8z"/>
+        </svg>
+        <span>מה להביא</span>
+    </button>
+
+    <button class="info-btn" onclick="openAI()">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2L14.5 8L21 10L14.5 12L12 18L9.5 12L3 10L9.5 8Z"/>
+        </svg>
+        <span>עוזרת AI</span>
+    </button>
+
+</div>
+
+<section class="content-section">
+    <p id="description">טוען תיאור...</p>
+</section>
+
+<div id="gallery" class="gallery"></div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-text"></div>
+    </div>
+</div>
+
+<div id="aiModal" class="modal">
+    <div class="modal-content ai-modal-content">
+
+        <span class="close" onclick="closeAI()">&times;</span>
+
+        <h2 class="ai-title">עוזרת AI לצילומים</h2>
+
+        <textarea
+            id="aiQuestion"
+            class="ai-question"
+            placeholder="שאלי אותי על בגדים, צבעים או לוקיישנים..."
+        ></textarea>
+
+        <button class="ai-send-btn" onclick="askAI()">
+            שאלי את ה-AI
+        </button>
+
+        <div id="aiAnswer" class="ai-answer"></div>
+
+    </div>
+</div>
+
+<script src="category.js"></script>
+
+</body>
+</html>
