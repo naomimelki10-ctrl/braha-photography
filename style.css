@@ -390,3 +390,62 @@ p {
         column-count: 1;
     }
 }
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 430px;
+        margin: 10px auto 20px;
+    }
+
+    .intro-text {
+        width: 100%;
+        padding: 0 22px;
+        margin: 30px auto;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .intro-title {
+        font-size: 28px;
+    }
+
+    .hero-track .slide {
+        width: 260px;
+        height: 320px;
+    }
+
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        padding: 0 20px;
+        gap: 25px 10px;
+    }
+
+    .category img {
+        width: 135px;
+        height: 135px;
+    }
+
+    .hebrew {
+        font-size: 21px;
+    }
+
+    .english {
+        font-size: 18px;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        left: 10px;
+        top: 70px;
+    }
+}
